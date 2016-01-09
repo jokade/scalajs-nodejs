@@ -1,7 +1,7 @@
 //import SonatypeKeys._
 
 lazy val commonSettings = Seq(
-  organization := "biz.enef",
+  organization := "de.surfice",
   version := "0.1-SNAPSHOT",
   scalaVersion := "2.11.7",
   scalacOptions ++= Seq("-deprecation","-unchecked","-feature","-Xlint"),
@@ -18,13 +18,15 @@ lazy val commonSettings = Seq(
 lazy val root = project.in(file(".")).
   enablePlugins(ScalaJSPlugin).
   settings(commonSettings: _*).
-  //settings(publishingSettings: _*).
+  settings(publishingSettings: _*).
   //settings(sonatypeSettings: _*).
   settings( 
     name := "scalajs-nodejs",
     libraryDependencies ++= Seq(
+      "com.lihaoyi" %%% "utest" % "0.3.1"
     ),
-    resolvers += Resolver.sonatypeRepo("releases")
+    resolvers += Resolver.sonatypeRepo("releases"),
+    scalaJSStage in Global := FastOptStage
   )
 
 
