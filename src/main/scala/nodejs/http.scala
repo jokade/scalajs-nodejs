@@ -49,6 +49,7 @@ trait ServerResponse extends stream.Writable {
   var statusCode: Int = js.native
   def end() : Unit = js.native
   def end(data: String) : Unit = js.native
+  def end(data: NodeBuffer): Unit = js.native
   def writeHead(statusCode: Int) : Unit = js.native
   def writeHead(statusCode: Int, statusMessage: String) : Unit = js.native
   def writeHead(statusCode: Int, headers: js.Dictionary[String]) : Unit = js.native

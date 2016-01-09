@@ -9,4 +9,5 @@ package object nodejs {
 
   @inline
   def require[T](module: String) : T = g.require(module).asInstanceOf[T]
+
 }
