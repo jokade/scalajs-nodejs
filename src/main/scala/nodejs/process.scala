@@ -30,6 +30,7 @@ trait NodeProcess extends js.Object {
   def execPath: String = js.native
   def exit(code: Int = 0): Unit = js.native
   def exitCode_=(code: Int) : Unit = js.native
+  def features: js.Dictionary[Boolean] = js.native
   def getegid(): Int = js.native
   def geteuid(): Int = js.native
   def getgid(): Int = js.native
