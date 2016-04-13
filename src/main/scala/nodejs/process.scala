@@ -40,7 +40,7 @@ trait NodeProcess extends js.Object {
   def mainModule: js.Dynamic = js.native
   def memoryUsage(): js.Dynamic = js.native
   def pid: Int = js.native
-  def plattform: String = js.native
+  def platform: String = js.native
   def release: js.Dictionary[String] = js.native
   def stderr: stream.Writable = js.native
   def stdin: stream.Readable = js.native
